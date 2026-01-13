@@ -1,0 +1,113 @@
+/* Estilos para el componente de login */
+:root{
+    --bg:#f3f6fb;
+    --card:#ffffff;
+    --accent:#4f46e5;
+    --accent-700:#4338ca;
+    --muted:#6b7280;
+    --success:#10b981;
+    --error:#ef4444;
+    --radius:12px;
+    --shadow: 0 8px 24px rgba(16,24,40,0.08);
+    --glass: rgba(255,255,255,0.6);
+    font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+.login-wrapper{
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(180deg, #eef2ff 0%, #ffffff 100%);
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+/* Card */
+.login{
+    width: 100%;
+    max-width: 420px;
+    background: var(--card);
+    border-radius: var(--radius);
+    padding: 2rem;
+    box-shadow: var(--shadow);
+    border: 1px solid rgba(16,24,40,0.04);
+    box-sizing: border-box;
+}
+
+/* Título */
+.login h3{
+    margin: 0 0 1rem 0;
+    font-size: 1.25rem;
+    color: #0f172a;
+    letter-spacing: -0.2px;
+}
+
+/* Inputs */
+.login input[type="text"],
+.login input[type="password"]{
+    width: 100%;
+    padding: 0.9rem 1rem;
+    margin-bottom: 0.75rem;
+    border-radius: 8px;
+    border: 1px solid rgba(15,23,42,0.08);
+    background: linear-gradient(180deg, #ffffff, #fbfdff);
+    box-sizing: border-box;
+    font-size: 0.95rem;
+    color: #0f172a;
+    transition: box-shadow .15s ease, border-color .15s ease;
+    outline: none;
+}
+
+/* Focus / accesibilidad */
+.login input:focus{
+    border-color: var(--accent);
+    box-shadow: 0 4px 18px rgba(79,70,229,0.12);
+}
+
+/* Placeholder */
+.login input::placeholder{
+    color: var(--muted);
+    opacity: 0.9;
+}
+
+/* Button */
+.login button{
+    width: 100%;
+    padding: 0.95rem 1rem;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(90deg, var(--accent), var(--accent-700));
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 0.98rem;
+    margin-top: 0.25rem;
+    transition: transform .08s ease, box-shadow .12s ease, opacity .12s;
+    box-shadow: 0 6px 18px rgba(79,70,229,0.14);
+}
+
+/* Hover / active */
+.login button:hover{ transform: translateY(-2px); }
+.login button:active{ transform: translateY(0); }
+.login button:disabled{
+    opacity: 0.6;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+/* Small helper text */
+.login .help{
+    font-size: 0.85rem;
+    color: var(--muted);
+    margin-top: 0.75rem;
+    text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 480px){
+    .login{ padding: 1.2rem; border-radius: 10px; }
+    .login h3{ font-size: 1.1rem; }
+    .login input{ padding: 0.8rem; }
+    .login button{ padding: 0.85rem; }
+}
