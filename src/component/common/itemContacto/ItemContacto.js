@@ -4,13 +4,13 @@ let ItemContacto = (imgContacto, nombre, telefono) => {
     
     let img = document.createElement("img");
     img.src = `./assets/icons/${imgContacto}`;
-    img.alt = "iconn";
+    //img.alt = "iconn";
 
     let etiquetaNombre = document.createElement("p");
-    etiquetaNombre.textContent = "nombre ";
+    etiquetaNombre.textContent = nombre ;
 
     let etiquetaTelefono = document.createElement("p");
-    etiquetaTelefono.textContent = "telefono ";
+    etiquetaTelefono.textContent = telefono ;
 
     div.appendChild(img);
     div.appendChild(etiquetaNombre);
