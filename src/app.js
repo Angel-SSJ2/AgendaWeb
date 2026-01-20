@@ -3,6 +3,7 @@ import { Contactos } from "./component/sections/Contacto/Contactos.js";
 import { formularioContacto } from "./component/sections/formularioContacto/formularioContacto.js";
 import { viewContacts } from "./component/layout/NavControles.js";
 import { viewNewContacts } from "./component/layout/NavControles.js";
+import { saveContactsToStorage, getContactsFromStorage } from './storage.js';
 //App
 let app = document.getElementById("app");
 
