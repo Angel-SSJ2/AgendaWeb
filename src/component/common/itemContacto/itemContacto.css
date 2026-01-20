@@ -2,7 +2,9 @@
     font-family: monospace;
     font-size: 1rem;
 
-    border: 1px solid #ccc;
+    background-color: rgb(155, 185, 255);
+
+    border: 1px solid #0066ff;
     border-radius: 5px;
 
     width: 100%;

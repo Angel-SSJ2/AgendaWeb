@@ -1,5 +1,7 @@
 import { Contactos } from "../sections/Contacto/Contactos.js";
 import { formularioContacto } from "../sections/formularioContacto/formularioContacto.js";
+import { Tarea } from "../sections/tareas/tareas.js";
+import { formularioTarea } from "../sections/formularioTarea/formularioTarea.js";
 
 let container = document.getElementById("container");
 
@@ -13,4 +15,14 @@ let viewNewContacts = function(){
     container.appendChild(formularioContacto());
 }
 
-export { viewContacts, viewNewContacts };   
+let viewTareas = function(){
+    container.innerHTML = "";
+    container.appendChild(Tarea());
+}
+
+let viewNewTareas = function(){
+    container.innerHTML = "";
+    container.appendChild(formularioTarea());
+}
+
+export { viewContacts, viewNewContacts, viewTareas, viewNewTareas };   

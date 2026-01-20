@@ -20,6 +20,7 @@ let Button = (title, id, img, callback) => {
 
     div.addEventListener("click", () =>{callback(); 
         console.log("seccion completada")});
+        
 
     return div;
 }

@@ -9,14 +9,16 @@
   display: grid;
   grid-template-columns: 300px 1fr;
   gap: 10px;
+  background-color: rgb(208, 255, 204);
 }
 
 #nav {
-  height: 100vh;
-  border: 1px solid #000000;
+  height: 110vh;
+  border: 1px solid #22ff00;
 }
 
 #container {
   height: 100vh;
-  border: 1px solid #ff0000;
+  border: 1px solid #2600ff;
+  background-color:  rgb(92, 105, 136);
   }

@@ -1,4 +1,6 @@
-import { login } from "./src/component/sections/login/Login"
+import { login } from "./src/component/sections/login/Login.js"
 let root = document.getElementById("root");
 
-root.appendChild(login());
+let loginContainer = login();
+
+root.appendChild(loginContainer);

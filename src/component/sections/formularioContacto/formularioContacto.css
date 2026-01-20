@@ -1,45 +1,82 @@
 body { 
-    font-family: sans-serif; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
     display: flex; 
     justify-content: center;
-    padding: 20px; 
-    background-color: #f4f4f9; 
+    align-items: center; /* Centra verticalmente también */
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f0f2f5; 
 }
 
 .container { 
-    background: white; 
+    /* Cambiamos el rojo por un azul profundo o un blanco elegante */
+    background: #ffffff; 
     padding: 2rem; 
-    border-radius: 8px; 
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1); 
-    width: 300px; 
-    }
+    border-radius: 12px; 
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1); 
+    width: 320px; 
+}
+
+/* Estilo para el título del formulario */
+.container h3 {
+    margin-top: 0;
+    color: #333;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
 
 input { 
     width: 100%; 
-    margin-bottom: 10px; 
-    padding: 8px; 
+    margin-bottom: 15px; 
+    padding: 12px; 
     box-sizing: border-box; 
-    }
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    border-color: #007bff; /* Azul al hacer clic */
+}
 
 button { 
     width: 100%; 
-    padding: 10px;
+    padding: 12px;
+    /* Un verde más amigable y profesional */
     background-color: #28a745; 
     color: white;
     border: none; 
+    border-radius: 6px;
     cursor: pointer; 
-    }
+    font-weight: bold;
+    font-size: 1rem;
+    transition: background-color 0.3s, transform 0.1s;
+}
 
 button:hover { 
     background-color: #218838; 
-    }
+}
+
+button:active {
+    transform: scale(0.98); /* Efecto de pulsación */
+}
 
 ul {
      list-style: none; 
      padding: 0; 
      margin-top: 20px; 
-    }
+}
     
-li { padding: 8px; 
-    border-bottom: 1px solid #ddd; 
-    }
+li { 
+    padding: 12px; 
+    border-bottom: 1px solid #eee; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #444;
+}
+
+li:last-child {
+    border-bottom: none;
+}

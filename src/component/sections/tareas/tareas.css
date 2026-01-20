@@ -1,0 +1,91 @@
+/* Contenedor principal de la sección de tareas */
+.tareas {
+    max-width: 600px;
+    margin: 20px auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.tareas h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* El elemento individual (item-tarea) */
+.item-tarea {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: white;
+    padding: 15px;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    border-left: 6px solid #ccc; /* Color por defecto (Gris) */
+    transition: all 0.3s ease;
+}
+
+.item-tarea img {
+    width: 24px;
+    height: 24px;
+    opacity: 0.6;
+}
+
+.item-tarea p {
+    margin: 0;
+    flex-grow: 1; /* Hace que el texto ocupe el espacio sobrante */
+}
+
+.item-tarea p:first-of-type {
+    font-weight: bold;
+    color: #222;
+}
+
+.item-tarea p:last-of-type {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Estilos para el Select */
+.item-tarea select {
+    padding: 5px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+/* --- CLASES DINÁMICAS POR ESTADO --- */
+/* Estas clases se aplican según el valor del estado en tu JS */
+
+.item-tarea.pendiente {
+    border-left-color: #ffcc00; /* Amarillo */
+}
+
+.item-tarea.en-progreso {
+    border-left-color: #3498db; /* Azul */
+    background-color: #f0f7ff;
+}
+
+.item-tarea.completada {
+    border-left-color: #2ecc71; /* Verde */
+    opacity: 0.8;
+}
+
+.item-tarea.completada p {
+    text-decoration: line-through;
+    color: #aaa;
+}
+
+.estado-tarea {
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 2px 6px;
+    background: #eee;
+    border-radius: 4px;
+    margin-right: 10px;
+}
