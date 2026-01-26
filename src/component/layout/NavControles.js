@@ -2,7 +2,7 @@ import { Contactos } from "../sections/Contacto/Contactos.js";
 import { formularioContacto } from "../sections/formularioContacto/formularioContacto.js";
 import { Tarea } from "../sections/tareas/tareas.js";
 import { formularioTarea } from "../sections/formularioTarea/formularioTarea.js";
-import { Perfil } from "../sections/Perfil/PErfil.js";
+import { Perfil } from "../sections/Perfil/Perfil.js";
 
 let container = document.getElementById("container");
 
