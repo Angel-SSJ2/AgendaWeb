@@ -69,3 +69,5 @@ async function tareas() {
 tareas();
 
 console.log("completado");
+
+export { app };
