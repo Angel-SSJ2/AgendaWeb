@@ -76,8 +76,8 @@
     padding: 0.95rem 1rem;
     border: none;
     border-radius: 10px;
-    background: linear-gradient(90deg, var(--accent), var(--accent-700));
-    color: #fff;
+    background-color:rgb(71, 176, 122);
+    color: #ffffff;
     font-weight: 600;
     cursor: pointer;
     font-size: 0.98rem;

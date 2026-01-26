@@ -1,47 +1,61 @@
 import { ContactList } from "../Contacto/db.js";
 
-let formularioContacto = () => {
-    // 1. Crear el contenedor principal del formulario
+let formularioContacto = (datos = null) => {
     const formContainer = document.createElement("form");
     formContainer.id = "contacto-form";
     formContainer.className = "custom-form";
 
-    // 2. Crear los inputs
     const inputNombre = document.createElement("input");
     inputNombre.type = "text";
     inputNombre.placeholder = "Nombre completo";
-    inputNombre.required = true;
     inputNombre.className = "form-input";
 
     const inputTel = document.createElement("input");
     inputTel.type = "tel";
     inputTel.placeholder = "Teléfono";
-    inputTel.required = true;
     inputTel.className = "form-input";
+    
+    const inputCor = document.createElement("input");
+    inputCor.type = "email"; 
+    inputCor.placeholder = "Correo";
+    inputCor.className = "form-input";
 
-    // 3. Crear el botón de envío
     const submitBtn = document.createElement("button");
     submitBtn.type = "submit";
-    submitBtn.textContent = "Guardar Contacto";
+    submitBtn.textContent = datos ? "Actualizar Cambios" : "Guardar Contacto";
     submitBtn.className = "submit-button";
 
-    // 4. Agregar elementos al contenedor
-    formContainer.append(inputNombre, inputTel, submitBtn);
+    if (datos) {
+        inputNombre.value = datos.nombre;
+        inputTel.value = datos.telefono;
+        inputCor.value = datos.correo;
+    }
 
-    // 5. Evento solicitado
+    formContainer.append(inputNombre, inputTel, inputCor, submitBtn);
+
     formContainer.addEventListener("submit", (e) => {
         e.preventDefault();
 
-        let contacto = {
-            nombre: inputNombre.value,
-            telefono: inputTel.value
-        };
-
-        console.log("Contacto guardado:", contacto);
-        ContactList.push(contacto);
-
-        // Opcional: Limpiar el formulario tras el envío
-        formContainer.reset();
+        if (datos) {
+             const indice = ContactList.findIndex(c => c.nombre === datos.nombre);
+            if (indice !== -1) {
+                ContactList[indice] = {
+                    nombre: inputNombre.value,
+                    telefono: inputTel.value,
+                    correo: inputCor.value
+                };
+            }
+            alert("Contacto actualizado con éxito");
+        } else {
+            let nuevoContacto = {
+                nombre: inputNombre.value,
+                telefono: inputTel.value,
+                correo: inputCor.value
+            };
+            ContactList.push(nuevoContacto);
+            alert("Contacto creado con éxito");
+        }      
+       
     });
 
     return formContainer;

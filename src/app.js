@@ -5,13 +5,14 @@ import { viewContacts } from "./component/layout/NavControles.js";
 import { viewNewContacts } from "./component/layout/NavControles.js";
 import { viewTareas } from "./component/layout/NavControles.js";
 import { viewNewTareas } from "./component/layout/NavControles.js";
+import { viewFavoritos } from "./component/layout/NavControles.js";
+import { viewPerfil } from "./component/layout/NavControles.js";
 
 //App
 let app = document.getElementById("app");
 
 //Menu
 let nav = document.getElementById("nav");
-
 
 nav.appendChild(Button(
     "Agenda", 
@@ -36,6 +37,19 @@ nav.appendChild(Button(
     "add", 
     "agregar.svg", 
     viewNewTareas));
+
+nav.appendChild(Button(
+    "Favoritos", 
+    "favs", 
+    "estrella.svg", 
+    viewFavoritos));
+
+nav.appendChild(Button(
+    "Mi Perfil", 
+    "perfil", 
+    "usuario.svg", 
+    viewPerfil
+));
 
 let container = document.getElementById("container");
 
