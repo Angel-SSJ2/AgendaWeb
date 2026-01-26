@@ -19,7 +19,7 @@ let login = function() {
     button.innerHTML = "Iniciar Sesión";
 
     button.onclick = function(){
-        window.location.href= "../../app.js";
+        window.location.href= "../../src/app.js";
     }
 
     container.appendChild(h3);
